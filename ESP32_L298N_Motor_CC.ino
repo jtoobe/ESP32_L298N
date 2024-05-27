@@ -3,7 +3,7 @@ Autor   : Andrea Lombardo
 Sitio   : https://www.lombardoandrea.com
 Fuente  : https://github.com/AndreaLombardo/L298N/
 
-Aquí puedes ver cómo funciona en una configuración común.
+No olividar incluir la biblioteca L298N de Andrea Lombardo
 
 El rango de velocidad va de 0 a 255, el valor predeterminado es 100.
 Usa setSpeed(velocidad) para cambiarla.
