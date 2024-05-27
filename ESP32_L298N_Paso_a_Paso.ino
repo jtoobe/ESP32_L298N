@@ -4,6 +4,17 @@
 Programa que permite controlar un motor paso a paso bipolar de cuatro conductores
 con un puente H del tipo L298N
 
+Lo único que hay que identificar son los dos pares de cables que se conectan a cada 
+una de las dos bobinas. Una bobina se conecta a OUT1 y EOUT2 y la otra a OUT3 y OUT4, la polaridad no importa.
+
+Para encontrar los dos cables de una bobina, haga lo siguiente con el motor desconectado:
+
+Intente hacer girar el eje del motor paso a paso con la mano y fíjese en lo difícil que es girar.
+Ahora elija un par de cables al azar del motor y toca los extremos desnudos entre sí.
+A continuación, intente hacer girar de nuevo el eje del motor paso a paso.
+Si siente mucha resistencia, ha encontrado un par de cables de la misma bobina. Si puede girar el eje libremente, pruebe con otro par de cables.
+Ahora conecta las dos bobinas a los terminales de salida indicadas en el diagrama de cableado anterior.
+
 */
 #include "Stepper.h"
 
