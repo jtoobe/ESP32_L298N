@@ -30,7 +30,7 @@ void Adelante ()
   //Direccion motor A
   digitalWrite (IN1, HIGH);
   digitalWrite (IN2, LOW);
-  analogWrite (ENA, 255); //Velocidad motor A
+  analogWrite (ENA, 255); //Velocidad motor max 255 minimo 170 aprox. (con este valor gira pero no tiene fuerza, probar para cada motor)
 
 }
 
@@ -39,7 +39,7 @@ void Atras ()
   //Direccion motor A
   digitalWrite (IN1, LOW);
   digitalWrite (IN2, HIGH);
-  analogWrite (ENA, 255);  //Velocidad motor A
+  analogWrite (ENA, 255);  //Velocidad motor
   
 }
 
@@ -49,7 +49,7 @@ void Parar ()
   //Direccion motor A
   digitalWrite (IN1, LOW);
   digitalWrite (IN2, LOW);
-  analogWrite (ENA, 0); //Velocidad motor A
+  analogWrite (ENA, 0); //Velocidad motor
   
 }
 
