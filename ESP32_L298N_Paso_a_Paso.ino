@@ -22,23 +22,39 @@ Ahora conecta las dos bobinas a los terminales de salida indicadas en el diagram
 const int pasosPorRevolucion = 200;
 
 // Inicializar la librería Stepper en los pines IN1, IN2, IN3 & IN4
-Stepper miMotorPasoAPaso = Stepper(pasosPorRevolucion, 32, 33, 25, 26);
+Stepper miMotorPasoAPaso = Stepper(pasosPorRevolucion, 32, 33, 25, 5);
+// y ENAA ENAB
+int enaA = 16;
+int enaB = 17;
 
-// Dejar puestos los puentes en los pines ENA y ENB del Puente H
+// quitar los puentes en los pines ENA y ENB del Puente H
 
 void setup() {
   // Establecer la velocidad del motor (en RPM):
   miMotorPasoAPaso.setSpeed(100);
+  pinMode(enaA, OUTPUT);
+  pinMode(enaB, OUTPUT);
+
+  digitalWrite(enaA, LOW);
+  digitalWrite(enaB, LOW);
 }
 
 void loop() {
   // Hacer que el motor dé una revolución en una dirección:
+  digitalWrite(enaA, HIGH);
+  digitalWrite(enaB, HIGH);
   miMotorPasoAPaso.step(200);
+  digitalWrite(enaA, LOW);
+  digitalWrite(enaB, LOW);
 
   delay(2000);
 
   // Hacer que el motor dé una revolución en la dirección opuesta:
+   digitalWrite(enaA, HIGH);
+  digitalWrite(enaB, HIGH);
   miMotorPasoAPaso.step(-200);
+  digitalWrite(enaA, LOW);
+  digitalWrite(enaB, LOW);
 
   delay(2000);
 }
