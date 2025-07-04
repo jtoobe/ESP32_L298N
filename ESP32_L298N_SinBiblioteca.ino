@@ -1,3 +1,7 @@
+// para motor de CC (los amarillos)
+// o motores rescatados de impresoras
+
+
 // Motor A
 int ENA =33;
 int IN1 = 32;
