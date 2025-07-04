@@ -16,6 +16,9 @@ Notas:
 Este programa es para manejar un motor de CC, no olvidar conectar el ground (-) de la fuente
 con el ESP32.
 
+// para motor de CC (los amarillos)
+// o motores rescatados de impresoras
+
 A velocidades menores a 200 el motor no tiene fuerza,
 gira pero solo serviría para mostrar movimiento.
 */
